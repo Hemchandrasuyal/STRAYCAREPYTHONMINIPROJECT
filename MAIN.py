@@ -1,4 +1,4 @@
-from DOCTORS import *
+from DOCTORS import doctors
 from USERS import *
 from tkinter import*
 from tkinter import messagebox
@@ -35,6 +35,7 @@ def screen1():
             doctors(uservalue.get(), pass1value.get())
 
         else:
+            messagebox.showinfo("MESSAGE", "FAILED")
             print("FAILED")
 
         mydb.commit()
@@ -153,6 +154,7 @@ def screen2():
 
         else:
             messagebox.showinfo("MESSAGE", "FAILED")
+
             print("FAILED")
 
         mydb.commit()
